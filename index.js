@@ -40,12 +40,30 @@ const promptUser = [{
         ]
     },
 ];
-// what is this function doing
-const writeToFile = (fileName, input) => {
-    return fs.writeFileSync(path.join(fileName, input))
-}
 
-// what is this function doing
+
+const generateFile = (answers) =>
+`## Github name
+${answers.name}
+`
+
+
+
+
+
+// .....
+const writeToFile = (generateFile, input) => {
+    fs.writeToFile (README.md), generateFile, err => {
+            if (err) {
+                console.log(err);
+        } else {
+                console.log("You're good to go!")
+    return fs.writeFileSync(path.join(generateFile, input))
+}
+    }
+};
+
+// 
 const runPrompts = () => {
     inquirer.prompt(promptUser)
         .then((responses) => {
@@ -56,3 +74,35 @@ const runPrompts = () => {
         })
 }
 runPrompts();
+
+
+function init (generateFile) {
+
+}
+
+init ();
+
+// fs.writeToFile (README.md), READMEfile, err => {
+//     if (err) {
+//         console.log(err);
+// } else {
+//         console.log("You're good to go!")
+// }
+// };
+
+// // what is this function doing
+// const writeToFile = (fileName, input) => {
+//     return fs.writeFileSync(path.join(fileName, input))
+// }
+
+// // what is this function doing
+// const runPrompts = () => {
+//     inquirer.prompt(promptUser)
+//         .then((responses) => {
+//             console.log("README.md is in process");
+//             writeToFile("README.md", generateMarkdown({
+//                 ...responses
+//             }))
+//         })
+// }
+// runPrompts();
