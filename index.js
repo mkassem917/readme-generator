@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const path = require('path');
-
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // (Prompt) User questions to populate the README.md
@@ -41,9 +40,9 @@ const promptUser = [{
     },
 ];
 
-
+//GitHub API goes here
 const generateFile = (answers) =>
-`## Github name
+    `## Github name
 ${answers.name}
 `
 
@@ -52,35 +51,37 @@ ${answers.name}
 
 
 // .....
-const writeToFile = (generateFile, input) => {
-    fs.writeToFile (README.md), generateFile, err => {
-            if (err) {
-                console.log(err);
-        } else {
-                console.log("You're good to go!")
-    return fs.writeFileSync(path.join(generateFile, input))
-}
-    }
-};
+// const writeToFile = (generateFile, input) => {
+//     fs.writeFile(README.md), generateMarkdown, (err) => {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             console.log("You're good to go!")
+//             return fs.writeFileSync(path.join(generate(data), input))
+//         }
+//     }
+// };
 
 // 
 const runPrompts = () => {
     inquirer.prompt(promptUser)
         .then((responses) => {
             console.log("README.md is in process");
-            writeToFile("README.md", generateMarkdown({
-                ...responses
-            }))
-        })
+            let  = generateMarkdown(data);
+            fs.writeFile("README.md", generateMarkdown(data), (err) => {
+                err ? console.log(err) : console.log("README has been created");
+            })
+        });
 }
+
 runPrompts();
 
 
-function init (generateFile) {
+function init() {
 
 }
 
-init ();
+init();
 
 // fs.writeToFile (README.md), READMEfile, err => {
 //     if (err) {
