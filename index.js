@@ -41,41 +41,28 @@ const promptUser = [{
 ];
 
 //GitHub API goes here
-const generateFile = (answers) =>
-    `## Github name
-${answers.name}
-`
+// const generateFile = (answers) =>
+//     `## Github name
+// ${answers.name}
+// `
 
 
-
-
-
-// .....
-// const writeToFile = (generateFile, input) => {
-//     fs.writeFile(README.md), generateMarkdown, (err) => {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             console.log("You're good to go!")
-//             return fs.writeFileSync(path.join(generate(data), input))
-//         }
-//     }
-// };
-
-// 
-const runPrompts = () => {
-    inquirer.prompt(promptUser)
-        .then((responses) => {
-            console.log("README.md is in process");
-            let  = generateMarkdown(data);
-            fs.writeFile("README.md", generateMarkdown(data), (err) => {
-                err ? console.log(err) : console.log("README has been created");
-            })
-        });
+// what is this function doing
+const writeToFile = (generateFile, input) => {
+    return fs.writeFileSync(path.join(generateFile, input))
 }
 
+// what is this function doing
+const runPrompts = () => {
+    inquirer.prompt(promptUser)
+        .then((data) => {
+            console.log("README.md is in process");
+            fs.writeFile("README.md", "generateFile", (err) => ({
+                ...data
+            }))
+        })
+}
 runPrompts();
-
 
 function init() {
 
@@ -83,27 +70,3 @@ function init() {
 
 init();
 
-// fs.writeToFile (README.md), READMEfile, err => {
-//     if (err) {
-//         console.log(err);
-// } else {
-//         console.log("You're good to go!")
-// }
-// };
-
-// // what is this function doing
-// const writeToFile = (fileName, input) => {
-//     return fs.writeFileSync(path.join(fileName, input))
-// }
-
-// // what is this function doing
-// const runPrompts = () => {
-//     inquirer.prompt(promptUser)
-//         .then((responses) => {
-//             console.log("README.md is in process");
-//             writeToFile("README.md", generateMarkdown({
-//                 ...responses
-//             }))
-//         })
-// }
-// runPrompts();
