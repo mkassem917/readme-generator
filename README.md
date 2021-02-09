@@ -5,13 +5,12 @@
 # README - GENERATOR
 Week 9 Homework - README
 
-Link:  https://mkassem917.github.io/readme-generator/ 
+Link:  https://mkassem917.github.io/readme-generator/
+Video: https://drive.google.com/file/d/14gBVbiGulGv_RM4vbxJxKOroazR69n0Q/view
 
-![readme-generator](assets/Project # 9 README GENERATOR.gif)
-![code-quiz](assets/quiz2.png)
-![code-quiz](assets/quiz3.png)
-![code-quiz](assets/quiz4.png)
-![code-quiz](assets/quiz5.png)
+##Example of working code
+
+![Project # 9 README GENERATOR](https://user-images.githubusercontent.com/74279957/107312757-23cce500-6a5f-11eb-9636-5f73a1161654.gif)
 
 
 **Description**
