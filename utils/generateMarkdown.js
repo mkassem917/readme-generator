@@ -3,9 +3,10 @@
 function generateMarkdown(data) {
   return `
   
-  # GitHub
-  
-  # Project 
+  ## GitHub
+  ${data.github}
+
+  ## Project 
   ${data.project}
 
   ## Content Description
