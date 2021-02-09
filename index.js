@@ -12,7 +12,7 @@ const promptUser = [{
     },
     {
         type: 'input',
-        name: 'project ',
+        name: 'project',
         message: 'What is your project title?',
     },
     {
@@ -40,33 +40,19 @@ const promptUser = [{
     },
 ];
 
-//GitHub API goes here
-// const generateFile = (answers) =>
-//     `## Github name
-// ${answers.name}
-// `
-
-
-// what is this function doing
-const writeToFile = (generateFile, input) => {
-    return fs.writeFileSync(path.join(generateFile, input))
+// function to actually write the file
+const writeToFile = (fileName, input) => {
+    return fs.writeFileSync(path.join(process.cwd(), fileName), input)
 }
 
-// what is this function doing
+// function to generate the prompt questions
 const runPrompts = () => {
     inquirer.prompt(promptUser)
-        .then((data) => {
+        .then((responses) => {
             console.log("README.md is in process");
-            fs.writeFile("README.md", "generateFile", (err) => ({
-                ...data
-            }))
+            writeToFile("README2.md", generateMarkdown(
+                responses
+            ))
         })
 }
 runPrompts();
-
-function init() {
-
-}
-
-init();
-

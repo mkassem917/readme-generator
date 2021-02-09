@@ -6,9 +6,10 @@
 Week 9 Homework - README
 
 Link:  https://mkassem917.github.io/readme-generator/
+
 Video: https://drive.google.com/file/d/14gBVbiGulGv_RM4vbxJxKOroazR69n0Q/view
 
-##Example of working code
+## Example of working code
 
 ![Project # 9 README GENERATOR](https://user-images.githubusercontent.com/74279957/107312757-23cce500-6a5f-11eb-9636-5f73a1161654.gif)
 
